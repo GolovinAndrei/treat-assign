@@ -1,0 +1,38 @@
+animal:
+  type:
+    permanent: dog
+  photo:
+    size: medium
+
+delivery:
+  size:
+    max: 20
+
+spring:
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:test;
+    username: sa
+    password:
+    h2:
+      console:
+        enabled: true
+    jpa:
+      hibernate:
+        ddl-auto: create
+      generate-ddl: true
+      show-sql: false
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.H2Dialect0
+  security:
+    oauth2:
+      client:
+        registration:
+          external:
+            client-id: 9xmZxtmhb7RdAxyYoPHHEB2ZdAWmgTUgezzzqIL5FVn7S697r7
+            client-secret: YlS3o4o3P2S9bWfOf2zVpK4vCUHcT01LV1f8Ticl
+            authorization-grant-type: client_credentials
+        provider:
+          external:
+            token-uri: https://api.petfinder.com/v2/oauth2/token
